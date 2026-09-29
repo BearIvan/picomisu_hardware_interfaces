@@ -415,6 +415,23 @@ struct StaLinkLayerIfacePacketStats {
    * Number of transmitted unicast data retry pkts.
    */
   uint64_t retries;
+  /**
+   * Average contention (medium access) time of the best effort access
+   * category. Factory PICO OS layout; the vendor Wi-Fi HAL fills it.
+   */
+  uint32_t contention_atime_be;
+  /**
+   * Average contention (medium access) time of the background access category.
+   */
+  uint32_t contention_atime_bk;
+  /**
+   * Average contention (medium access) time of the video access category.
+   */
+  uint32_t contention_atime_vi;
+  /**
+   * Average contention (medium access) time of the voice access category.
+   */
+  uint32_t contention_atime_vo;
 };
 
 /**
